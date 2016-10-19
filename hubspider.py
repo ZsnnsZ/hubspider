@@ -5,6 +5,7 @@
 - email  : "925453683@qq.com"
 - date   : "2016.10.19"
 重现前请确保你有hub系统账号密码，请用fiddler或者火狐浏览器等工具抓包
+仓促编写，质量有限，仅供参考
 '''
 import re
 import urllib
@@ -47,8 +48,8 @@ def geturl2(ln):
         'Accept - Encoding': 'gzip, deflate',
         'Accept - Language': 'zh - CN, zh;q = 0.8'
     }
-    pwd = base64.b64encode(b'zsn177288')
-    params2 = {'username':'U201417238','password':pwd,'ln':ln}
+    pwd = base64.b64encode(b'123456')
+    params2 = {'username':'U20211202','password':pwd,'ln':ln}
     bdata2 = urllib.parse.urlencode(params2).encode('ascii')
     req2 = urllib.request.Request(url2, bdata2, headers=headers2)
     response2 = urllib.request.urlopen(req2)
