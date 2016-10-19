@@ -1,0 +1,141 @@
+贴出（模拟登陆）抓包结果，方便查阅
+
+1.hub.hust.edu.cn/hublogin.action
+
+POST http://hub.hust.edu.cn/hublogin.action HTTP/1.1
+Host: hub.hust.edu.cn
+Connection: keep-alive
+Content-Length: 65
+Cache-Control: max-age=0
+Origin: http://hub.hust.edu.cn
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Referer: http://hub.hust.edu.cn/index.jsp
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: username=U201417238; JSESSIONID=0000RIXzGp2o56tehZ4QR3WGVOp:166nevr82; BIGipServerpool6_http=319425034.20480.0000
+
+username=U201417238&password=enNuMTc3Mjg4&ln=app61.dc.hust.edu.cn
+
+
+HTTP/1.1 200 OK
+Date: Tue, 18 Oct 2016 14:01:58 GMT
+Server: YxlinkWAF      
+Content-Length: 958
+Keep-Alive: timeout=10
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+Content-Language: zh-CN
+
+
+
+
+
+<body>
+	<form action="" method="post" name="form1">
+		<input type="hidden" id="usertype" name="usertype" value="xs">
+		<input type="hidden" id="username" name="username" value="U201417238">
+		<input type="hidden" id="password" name="password" value="feefcbfd8a350051f03b0787a4838cda">
+		<input type="hidden" id="url" name="url" value="http://s.hub.hust.edu.cn/">
+		<input type="hidden" name="key1" value="381312"/>
+		<input type="hidden" name="key2" value="2582bc5091ef97d4798ac92fef9bd459"/>
+		<input type="hidden" name="F_App" value="From kslgin. App:app61.dc.hust.edu.cn|app613|IP:10.10.10.245"/>
+	</form>
+	<script type="text/javascript">
+	var url = document.getElementById("url").value;
+	var to_url = "";
+	if(url == "http://curriculum.hust.edu.cn/"){
+		to_url = url+'userLoginAction.do';
+	}else{
+		to_url = url+'hublogin.action';
+	}
+	document.form1.action=url+'hublogin.action';
+	document.form1.submit();
+	</script>
+</body>
+
+
+
+2.s.hub.hust.edu.cn/hublogin.action
+
+POST http://s.hub.hust.edu.cn/hublogin.action HTTP/1.1
+Host: s.hub.hust.edu.cn
+Connection: keep-alive
+Content-Length: 236
+Cache-Control: max-age=0
+Origin: http://hub.hust.edu.cn
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Referer: http://hub.hust.edu.cn/hublogin.action
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: username=U201417238
+
+usertype=xs&username=U201417238&password=feefcbfd8a350051f03b0787a4838cda&url=http%3A%2F%2Fs.hub.hust.edu.cn%2F&key1=381312&key2=2582bc5091ef97d4798ac92fef9bd459&F_App=From+kslgin.+App%3Aapp61.dc.hust.edu.cn%7Capp613%7CIP%3A10.10.10.245
+
+HTTP/1.1 302 Found
+Date: Tue, 18 Oct 2016 13:59:23 GMT
+Server: YxlinkWAF      
+Location: http://s.hub.hust.edu.cn/hub.jsp
+Content-Length: 0
+Set-Cookie: JSESSIONID=0000xNJtgoZ7vYcKx5L2mnZm3os:166nacean; Path=/
+Expires: Thu, 01 Dec 1994 16:00:00 GMT
+Cache-Control: no-cache="set-cookie, set-cookie2"
+Keep-Alive: timeout=10, max=100
+Connection: Keep-Alive
+Content-Type: text/plain
+Content-Language: zh-CN
+
+
+3.s.hub.hust.edu.cn/hub.jsp
+
+GET http://s.hub.hust.edu.cn/hub.jsp HTTP/1.1
+Host: s.hub.hust.edu.cn
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Referer: http://hub.hust.edu.cn/hublogin.action
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: username=U201417238; JSESSIONID=0000xNJtgoZ7vYcKx5L2mnZm3os:166nacean
+
+HTTP/1.1 200 OK
+Date: Tue, 18 Oct 2016 13:59:24 GMT
+Server: YxlinkWAF      
+P3P: CP="IDC DSP COR ADM DEVi TATi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"
+Cache-Control: max-age=0.0
+Keep-Alive: timeout=10, max=99
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html;charset=UTF-8
+Content-Language: zh-CN
+
+2c4
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>华中科技大学</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link href="/css/main.css" rel="stylesheet" />
+		<!--[if lte IE 6]>
+			<link href="/css/ie.css" rel="stylesheet" />
+        <![endif]-->
+后面的不用贴了
