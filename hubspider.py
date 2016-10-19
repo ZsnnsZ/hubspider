@@ -48,7 +48,9 @@ def geturl2(ln):
         'Accept - Encoding': 'gzip, deflate',
         'Accept - Language': 'zh - CN, zh;q = 0.8'
     }
+    #在此输入你自己的hub系统密码
     pwd = base64.b64encode(b'123456')
+    #在此输入你自己的hub系统账号
     params2 = {'username':'U20211202','password':pwd,'ln':ln}
     bdata2 = urllib.parse.urlencode(params2).encode('ascii')
     req2 = urllib.request.Request(url2, bdata2, headers=headers2)
